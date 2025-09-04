@@ -1,0 +1,21 @@
+<div class="info-modal-component">
+    <div class="success_modal">
+      <div class="heading">
+        <span> Dear <strong>{{ data.headings.message1 }}</strong>{{ data.headings.message2 }} </span>
+          <mat-icon>check_circle</mat-icon>
+        </div>
+
+      <div class="confirmation-points mt-2">
+        <p> Counselor will review your details and get back to you within 24 hours.</p>
+      </div>
+
+      <div class="trust mt-3">
+      <p>We truly appreciate your trust in us.</p>
+      <p>🔒 Your information is kept confidential and secure.</p>
+      </div>
+
+
+
+      <button class="btn btn-dark mt-3" (click)="closeModal()">Close</button>
+    </div>
+  </div>

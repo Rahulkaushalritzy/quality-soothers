@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  background-color: #d8e9e3;
+  justify-content: center;
+  padding: 4rem;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.main-wrapper {
+  background-clip: padding-box;
+  box-shadow: inset 0 0 0 2rem #d6e8e1;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding-bottom: 2rem;
+}

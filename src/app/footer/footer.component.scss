@@ -1,0 +1,44 @@
+.footer-component {
+  body {
+    color: rgb(241, 238, 235);
+  }
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+
+  .accordion {
+    margin-bottom: 20px;
+    --bs-accordion-bg: white;
+    --bs-accordion-active-bg: rgb(198, 196, 196);
+  }
+
+  .accordion-button {
+    padding: 5px;
+    font-weight: 500;
+  }
+  .accordion-header {
+    margin: 0;
+  }
+  //   .footer {
+  //   max-width: 1000px;
+  //   margin: 2rem auto;
+  //   padding: 0 1rem;
+  // }
+
+  footer {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background-color: #1a6756;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-text {
+    color: white;
+  }
+}

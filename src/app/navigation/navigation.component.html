@@ -1,0 +1,50 @@
+<!-- <div class="navigation-component">
+  <nav class="navbar">
+    <div class="logo">
+      <h2>qs</h2>
+      <p>Quality Soothers</p>
+    </div>
+    <ul class="nav-links">
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/about" [routerLinkActiveOptions]="{ exact: true }">About</a>
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/book-session" [routerLinkActiveOptions]="{ exact: true }">Book a
+          Session</a>
+      </li>
+    </ul>
+  </nav>
+</div> -->
+
+
+<div class="navigation-component">
+  <nav class="navbar">
+    <div class="logo">
+      <p>Quality Soothers</p>
+    </div>
+
+    <!-- Hamburger Icon for Mobile View -->
+    <div class="hamburger" (click)="toggleNavbar()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" [class.active]="isNavbarOpen" (click)="isNavbarOpen = false">
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/about" [routerLinkActiveOptions]="{ exact: true }">About</a>
+      </li> -->
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/book-session" [routerLinkActiveOptions]="{ exact: true }">Book a
+          Session</a>
+      </li>
+    </ul>
+  </nav>
+</div>

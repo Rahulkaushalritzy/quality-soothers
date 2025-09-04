@@ -1,0 +1,91 @@
+<div class="book-session-component">
+  <div class="main-wrapper">
+
+    <section class="consultation-intro">
+      <div class="consultation-section">
+        <div class="consultation-block">
+          <span class="consultation-text-1">Get in touch with your Counsellor</span>
+          <span class="consultation-text-2">100% FREE CONSULTATION! NO HIDDEN CHARGES</span>
+          <span class="consultation-text-3">Schedule a complimentary consultation with our experienced therapist to talk
+            about your mental health concerns and explore ways to address them.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="landing-intro">
+      <div class="intro-left">
+        <div class="icon-block">
+          <mat-icon>calendar_month</mat-icon>
+          <span class="icon-text"> Book personalized therapy sessions</span>
+        </div>
+
+        <div class="icon-block">
+          <mat-icon>schedule</mat-icon>
+          <span class="icon-text"> Flexible Scheduling</span>
+        </div>
+
+        <div class="icon-block">
+          <mat-icon>lock</mat-icon>
+          <span class="icon-text"> Confidential & Safe Space</span>
+        </div>
+
+        <div class="icon-block">
+          <mat-icon>group</mat-icon>
+          <span class="icon-text"> Experienced & Empathetic Therapists</span>
+        </div>
+
+        <div class="icon-block">
+          <mat-icon>language</mat-icon>
+          <span class="icon-text"> Accessible Support When You Need It</span>
+        </div>
+
+      </div>
+      <div class="intro-right">
+        <h2 class="section-title">Book a Session</h2>
+        <p class="session-subtext">You are one step closer to your mental peace and happiness!</p>
+        <p class="session-subtext">Fill in your details and we'll get back to you in no time!</p>
+
+        <form class="session-form" [formGroup]="form">
+          <div class="form-row">
+            <div class="input-container">
+              <input type="text" placeholder="Firstname" formControlName="firstname" />
+              <div *ngIf="form.get('firstname').touched && form.get('firstname').invalid" class="error">
+                <span *ngIf="form.get('firstname').hasError('required')">Firstname is required.</span>
+              </div>
+            </div>
+            <div class="input-container">
+              <input type="text" placeholder="Lastname" formControlName="lastname" />
+              <div *ngIf="form.get('lastname').touched && form.get('lastname').invalid" class="error">
+                <span class="error" *ngIf="form.get('lastname').hasError('required')">Lastname is required.</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-container">
+              <input type="text" placeholder="Mobile number" formControlName="mobile" />
+              <div *ngIf="form.get('mobile').touched && form.get('mobile').invalid" class="error">
+                <span *ngIf="form.get('mobile').hasError('required')">Mobile number is required.</span>
+                <span *ngIf="form.get('mobile').hasError('pattern')">Enter a valid 10-digit mobile number.</span>
+              </div>
+            </div>
+            <div class="input-container">
+              <input type="email" placeholder="Email" formControlName="email" />
+              <div *ngIf="form.get('email').touched && form.get('email').invalid" class="error">
+                <span *ngIf="form.get('email').hasError('required')">Email is required.</span>
+                <span *ngIf="form.get('email').hasError('email')">Enter a valid email address.</span>
+              </div>
+            </div>
+          </div>
+          <div class="input-container">
+            <textarea placeholder="Your Message" formControlName="message"></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="button" [disabled]="form.invalid" (click)="submit()">Submit</button>
+          </div>
+        </form>
+
+
+      </div>
+    </section>
+  </div>
+</div>

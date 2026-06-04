@@ -7,10 +7,10 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "C:\\Users\\rahul\\Workspace\\quality-soothers\\dist"
+command = "npm install --legacy-peer-deps && ng build --configuration production"
+publish = "dist/quality-soothers"
 publishOrigin = "ui"
 commandOrigin = "ui"
-command = "npm run build"
 
 [build.environment]
 

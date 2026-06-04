@@ -1,20 +1,20 @@
 <div class="info-modal-component">
-    <div class="success_modal">
+    <div [ngClass]="data.isError ? 'error_modal' : 'success_modal'">
       <div class="heading">
-        <span> Dear <strong>{{ data.headings.message1 }}</strong>{{ data.headings.message2 }} </span>
-          <mat-icon>check_circle</mat-icon>
-        </div>
+        <span *ngIf="!data.isError"> Dear <strong>{{ data.headings.message1 }}</strong>{{ data.headings.message2 }} </span>
+        <span *ngIf="data.isError"> <strong>{{ data.headings.message1 }}</strong> {{ data.headings.message2 }} </span>
+        <mat-icon>{{ data.isError ? 'error' : 'check_circle' }}</mat-icon>
+      </div>
 
       <div class="confirmation-points mt-2">
-        <p> Counselor will review your details and get back to you within 24 hours.</p>
+        <p>{{ data.headings.message3 }}</p>
       </div>
 
-      <div class="trust mt-3">
-      <p>We truly appreciate your trust in us.</p>
-      <p>🔒 Your information is kept confidential and secure.</p>
+      <div *ngIf="!data.isError" class="trust mt-3">
+        <p>Counselor will review your details and get back to you within 24 hours.</p>
+        <p>We truly appreciate your trust in us.</p>
+        <p>🔒 Your information is kept confidential and secure.</p>
       </div>
-
-
 
       <button class="btn btn-dark mt-3" (click)="closeModal()">Close</button>
     </div>

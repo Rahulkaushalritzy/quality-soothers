@@ -5,7 +5,7 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
   providedIn: 'root'
 })
 export class ModalService {
-  public bsModalRef: BsModalRef;
+  public bsModalRef!: BsModalRef;
   modalResponse: any;
 
   constructor(private modalsService: BsModalService,

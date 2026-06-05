@@ -35,15 +35,13 @@
 
     <!-- Navigation Links -->
     <ul class="nav-links" [class.active]="isNavbarOpen" (click)="isNavbarOpen = false">
-      <li class="nav-item">
-        <a routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-      </li>
-      <!-- <li class="nav-item">
-        <a routerLinkActive="active" routerLink="/about" [routerLinkActiveOptions]="{ exact: true }">About</a>
-      </li> -->
-      <li class="nav-item">
-        <a routerLinkActive="active" routerLink="/book-session" [routerLinkActiveOptions]="{ exact: true }">Book a
-          Session</a>
+      <li class="nav-item" *ngFor="let item of navItems">
+        <a
+          [routerLink]="item.path"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >{{ item.label }}</a
+        >
       </li>
     </ul>
   </nav>
